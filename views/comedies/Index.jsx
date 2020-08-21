@@ -14,7 +14,8 @@ class Index extends React.Component {
                         comedies.map((comedy, i) => {
                             return (
                                 <li>
-                                    <a href={`/comedies/${comedy._id}`}>{comedy.name}</a> <br/> {comedy.image} <br></br>
+                                    <h3>{comedy.title}</h3>
+                                    <a href={`/comedies/${comedy._id}`}>{comedy.title}</a> <br/> {comedy.image} <br></br>
                                     {comedy.watched ? `It is watched` : `It is not watched`}
                                     {/* /comedies/id_of_the_comedy/override_post_method */}
                                     <form action={`/comedies/${comedy._id}?_method=DELETE`} method="POST">

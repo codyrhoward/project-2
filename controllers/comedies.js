@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Comedy = require('../models/comedies.js');
+const Comedy = require('../models/comedies');
 
 // add routes
 // Index
@@ -29,7 +29,7 @@ router.delete('/:id', (req, res) => {
 
 // Update
 router.put('/:id', (req, res) => {
-    req.body.readyToEat = req.body.readyToEat === "on" ? true : false;
+    req.body.watched = req.body.watched === "on" ? true : false;
 
     // Update the comedy document using our model
     Comedy.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedModel) => {
@@ -39,14 +39,14 @@ router.put('/:id', (req, res) => {
 
 // Create
 router.post('/', (req, res) => {
-    if (req.body.readyToEat === "on") {
-        req.body.readyToEat = true;
+    if (req.body.watched === "on") {
+        req.body.watched = true;
     } else {
-        req.body.readyToEat = false;
+        req.body.watched = false;
     }
     // Use Model to create Comedy Document
     Comedy.create(req.body, (error, createdComedy) => {
-        // Once created - respond to client
+       
         res.redirect('/comedies');
     });
 });
