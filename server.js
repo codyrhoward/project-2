@@ -23,8 +23,8 @@ mongoose.connection.once('open', () => {
 })
 
 // Controller
-const dramasController = require('./controllers/dramas.js');
-app.use('/dramas', dramasController);
+// const dramasController = require('./controllers/dramas.js');
+// app.use('/dramas', dramasController);
 
 const comediesController = require('./controllers/comedies.js')
 app.use('/comedies', comediesController)
@@ -36,5 +36,5 @@ app.listen(PORT, () => {
 
 //Default route
 app.get('/', (req,res)=>{
-    res.redirect('/dramas')
+    res.redirect('/comedies')
 })
