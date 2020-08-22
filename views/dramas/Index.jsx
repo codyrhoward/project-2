@@ -1,32 +1,36 @@
-const React = require('react')
+const React = require('react');
 
-class Index extends React.Component{
-    render(){
-        // const dramas = this.props.dramas;
-        // OR obj desctructuring:
-        const {dramas} = this.props
+class Index extends React.Component {
+    render() {
+        const { dramas } = this.props;
         return (
-            <>
-            <h1>Drama Index Page</h1>
-            <a href={'/dramas/new'}>Add New Drama</a>
-            {dramas.map((drama)=>{// the '?' doesnt return undefinded if no data in db
-                return(
-                  
-                    <div key={drama._id}>
-                       
-                        <p>{drama.name}</p>
-                        {drama.isGreen ? `it is green`:`it is not green`}<br/>
-                        <a href={`/dramas/${drama._id}`}>check it out!</a>
-                        <form action={`/dramas/${drama._id}?_method=DELETE`} method="POST">
-                        <input type="submit" value="delete"/>
-                        </form>
-                    </div>
-                  )
-            })}
-            </>
+            <div>
+                <h1>Drama Index Page</h1>
+                <nav>
+                    <a href="/dramas/new">Create a New Drama</a>
+                </nav>
+                <ul>
+                    {
+                        dramas.map((drama, i) => {
+                            return (
+                                <li>
+                                    <h3>{drama.title}</h3>
+                                    <a href={`/dramas/${drama._id}`}>{drama.title}</a> <br/> {drama.image} <br></br>
+                                    {drama.watched ? `It is watched` : `It is not watched`}
+                                    {/* /dramas/id_of_the_drama/override_post_method */}
+                                    <form action={`/dramas/${drama._id}?_method=DELETE`} method="POST">
+                                        <input type="submit" value="delete"/>
+                                    </form>
+                                    {/* Create a link to the edit route /dramas/id_of_drama/edit */}
+                                    <a href={`/dramas/${drama._id}/edit`}>Edit</a>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
         )
     }
 }
 
-
-module.exports = Index
+module.exports = Index;

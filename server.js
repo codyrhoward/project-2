@@ -22,9 +22,9 @@ mongoose.connection.once('open', () => {
     console.log("connected to mongo");
 })
 
-// Controller
-// const dramasController = require('./controllers/dramas.js');
-// app.use('/dramas', dramasController);
+//Controller
+const dramasController = require('./controllers/dramas.js');
+app.use('/dramas', dramasController);
 
 const comediesController = require('./controllers/comedies.js')
 app.use('/comedies', comediesController)
