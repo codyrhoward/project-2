@@ -29,6 +29,10 @@ app.use('/dramas', dramasController);
 const comediesController = require('./controllers/comedies.js')
 app.use('/comedies', comediesController)
 
+app.get('/', (req, res)=>{
+    res.render('static/Home')
+  })
+
 // listen
 app.listen(PORT, () => {
     console.log('listening on: ' + PORT);
@@ -36,5 +40,5 @@ app.listen(PORT, () => {
 
 //Default route
 app.get('/', (req,res)=>{
-    res.redirect('/comedies')
+    res.redirect('/home')
 })

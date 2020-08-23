@@ -2,14 +2,17 @@ const React = require('react');
 
 class Edit extends React.Component {
     render() {
-        const { _id, name, image, watched} = this.props.comedy;
+        const { _id, title, image, watched, trailer, synopsis} = this.props.comedy;
         return (
             <div>
                 <h1>Edit Page</h1>
                 {/* url - /comedies/id_of_comedy? parameter to indicate the request */}
                 <form action={`/comedies/${_id}?_method=PUT`} method="POST">
-                    Title: <input type="text" name="name" defaultValue={title}/> <br/>
-                    Image: <input type="text" name="color" defaultValue={image}/> <br/>
+                    Title: <input type="text" name="title" defaultValue={title}/> <br/>
+                    Image: <input type="text" name="image" defaultValue={image}/> <br/>
+                    Trailer: <input type="text" name="trailer" defaultValue={trailer}/><br/> 
+                    Synopsis: <br/> 
+                    <textarea type="text" name="synopsis" defaultValue={synopsis} rows="10" cols="35"/><br/>
                     Watched: 
                     <input type="checkbox" name="watched" checked={watched}/>
                     <br/>

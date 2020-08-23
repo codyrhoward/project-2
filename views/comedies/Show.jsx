@@ -6,13 +6,16 @@ class Show extends React.Component {
         // const image = this.props.comedy.image;
         // const watched = this.props.comedy.watched;
         // destructuring
-        const { name, image, watched } = this.props.comedy;
+        const { title, image, _id, synopsis, watched, trailer } = this.props.comedy;
         return (
             <div>
-                <h1>Comedies Show Page</h1>
-                <p>{name}</p> 
-                <p>{image}</p>
-                <p>{watched ? `It is watched` : `Is not watched`}</p>
+                <h1>{title}</h1>
+                <img src={image}></img>
+                <h2>Synopsis:</h2>
+                <p>{synopsis}</p>                
+                <iframe width="960" height="540" src={`${trailer}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>{watched ? `You've watched this movie` : `You still need to watch this movie`}</p>
+                <a href={`/comedies/${_id}/edit`}>Edit</a>
             </div>
         )
     }

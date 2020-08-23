@@ -5,6 +5,8 @@ const Schema = mongoose.Schema;
 const comedySchema = new Schema({
     title: { type: String, required: true },
     image: { type: String, required: true },
+    synopsis: {type: String, required: true},
+    trailer: {type: String, required: false},
     watched: Boolean
 }) 
 
