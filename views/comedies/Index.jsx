@@ -6,21 +6,25 @@ class Index extends React.Component {
         const { comedies } = this.props;
         return (
             <Default>
+            <body className="comedy-body">
             <div>                          
-                <h1>Your Comedy List</h1>
-                <ul>
+                <h1 className="d-flex justify-content-center my-4">Your Comedy Watchlist</h1>
+                <hr/>
+                <ul className="comedy-index-ul">
                     {
                         comedies.map((comedy, i) => {
                             return (
-                                <li>
-                                    <h3>{comedy.title}</h3>
-                                    <a href={`/comedies/${comedy._id}`}><img src={comedy.image}></img></a><br/>
-                                    {comedy.watched ? `You've watched this movie!` : `You still need to watch this movie.`}
-                                    {/* /comedies/id_of_the_comedy/override_post_method */}
+                                <li className="comedy-index-li">
+                                    {/* <h3>{comedy.title}</h3> */}
+                                    <a className="index-link" href={`/comedies/${comedy._id}`}><img className="comedy-index-img"src={comedy.image}/></a><br/>
+                                    <div className="under-container">
+                                    <p className="index-watched">{comedy.watched ? `You've watched this movie!` : `You need to watch this movie.`}</p>
+                                    
                                     <form action={`/comedies/${comedy._id}?_method=DELETE`} method="POST">
-                                        <input type="submit" value="delete"/>
+                                        <input className="btn btn-primary" type="submit" value="delete"/>
                                     </form>
-                                    {/* Create a link to the edit route /comedies/id_of_comedy/edit */}
+                                    </div>
+                                    
                                     
                                 </li>
                             )
@@ -28,6 +32,7 @@ class Index extends React.Component {
                     }
                 </ul>
             </div>
+            </body>
             </Default>
         )
     }

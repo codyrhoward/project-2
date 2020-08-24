@@ -25,6 +25,32 @@
 .new-comedy{
     background-color: lightgray;
 } */
-#show-com-img{
-    width: 100px;
+
+.comedy-index-ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 5px;
+}
+.comedy-index-li{
+    
+    padding: 5px;
+}
+.comedy-index-img{
+    
+    width: 300px;
+}
+.under-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.index-watched{
+    /* border: 2px solid rgb(53,58,63); */
+    padding: 6px;
+    border-radius: 3px;
+}
+.comedy-body{
+    background-color: white;
 }

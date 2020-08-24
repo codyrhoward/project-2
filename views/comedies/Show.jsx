@@ -15,7 +15,7 @@ class Show extends React.Component {
             <div className="row align-items-end">
                 <div className="col my-col mt-5">
                     {/* <h1 className="align-items-center">{title}</h1> */}
-                    <img className="w-75" src={image}></img>
+                    <img className="w-75" src={image}/>
                     
                 </div>
                 <div className="col">
