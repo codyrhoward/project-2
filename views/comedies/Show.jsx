@@ -1,4 +1,5 @@
 const React = require('react');
+const Default = require('../components/Default');
 
 class Show extends React.Component {
     render() {
@@ -8,6 +9,7 @@ class Show extends React.Component {
         // destructuring
         const { title, image, _id, synopsis, watched, trailer } = this.props.comedy;
         return (
+            <Default>
             <div>
                 <h1>{title}</h1>
                 <img src={image}></img>
@@ -17,6 +19,7 @@ class Show extends React.Component {
                 <p>{watched ? `You've watched this movie` : `You still need to watch this movie`}</p>
                 <a href={`/comedies/${_id}/edit`}>Edit</a>
             </div>
+            </Default>
         )
     }
 }

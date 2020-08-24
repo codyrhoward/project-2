@@ -1,18 +1,13 @@
 const React = require('react');
+const Default = require('../components/Default');
 
 class Index extends React.Component {
     render() {
         const { comedies } = this.props;
         return (
-            <div>               
-                <nav>
-                    <a href="/comedies/new">Add a Comedy</a>
-                    <a href="/home">Home</a>
-                    <a href="/comedies">Comedies</a>
-                    <a href="/dramas">Dramas</a>
-                    <a href="/dramas/new">Add a Drama</a>
-                </nav>
-                <h1>Your Comedies</h1>
+            <Default>
+            <div>                          
+                <h1>Your Comedy List</h1>
                 <ul>
                     {
                         comedies.map((comedy, i) => {
@@ -33,6 +28,7 @@ class Index extends React.Component {
                     }
                 </ul>
             </div>
+            </Default>
         )
     }
 }

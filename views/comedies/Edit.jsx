@@ -1,9 +1,12 @@
 const React = require('react');
+const Default = require('../components/Default');
 
 class Edit extends React.Component {
     render() {
         const { _id, title, image, watched, trailer, synopsis} = this.props.comedy;
         return (
+            <Default>
+
             <div>
                 <h1>Edit Page</h1>
                 {/* url - /comedies/id_of_comedy? parameter to indicate the request */}
@@ -19,6 +22,7 @@ class Edit extends React.Component {
                     <input type="submit" name="" value="Submit Changes"/>
                 </form>
             </div>
+            </Default>
         )
     }
 }
