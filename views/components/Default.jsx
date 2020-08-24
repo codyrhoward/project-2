@@ -12,10 +12,10 @@ class Default extends React.Component {
                 <div>
                             <nav className="navbar  navbar-dark bg-dark">
                             <a className="navbar-brand" href="/">Watchlist</a>
-                            <a className="nav-link" href="/comedies/new">Add a Comedy</a>
+                            <a className="nav-link" href="/comedies/new">Add Comedy</a>
                             <a className="nav-link" href="/comedies">Comedies</a>
                             <a className="nav-link" href="/dramas">Dramas</a>
-                            <a className="nav-link" href="/dramas/new">Add a Drama</a>
+                            <a className="nav-link" href="/dramas/new">Add Drama</a>
                         </nav>
                     </div>
                 </header>

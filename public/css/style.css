@@ -1,13 +1,15 @@
 
+.home-body{
+    background-color: rgb(53,58,63);
+}
 .jumbotron{
     background-image: url(https://cdn.pixabay.com/photo/2014/10/16/09/15/lens-490806_1280.jpg);
     background-size: cover;
-    opacity: 1;
     height: 33em;
 }
-.display-4, .lead{
-    color: lightgray;
-    text-align: right;
+.lead{
+    color: white;
+    text-align: left;
 } 
 .display-3{
     color: rgb(48, 127, 246);
