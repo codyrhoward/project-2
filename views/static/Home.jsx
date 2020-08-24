@@ -17,7 +17,7 @@ class Home extends React.Component {
     </div>
     </div>
     <div className="div">
-<section></section>
+{/* <section>“We love films because they makes us feel something. They speak to our desires, which are never small. They allow us to escape and to dream and to gaze into the eyes that are impossibly beautiful and huge. They fill us with longing. But also. They tell us to remember; they remind us of life. Remember, they say, how much it hurts to have your heart broken.”</section> */}
     </div>
     </body>  
       </Default>

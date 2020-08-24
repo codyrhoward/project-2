@@ -16,3 +16,15 @@
     /* color: rgb(53, 58, 63); */
     text-align: right;    
 }
+.div{
+    text-align: center;
+}
+/* .col-7{
+    border-radius: 4px;
+}
+.new-comedy{
+    background-color: lightgray;
+} */
+#show-com-img{
+    width: 100px;
+}

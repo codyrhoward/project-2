@@ -40,7 +40,7 @@ class Edit extends React.Component {
                 </div>
                  
                 <div className="form-group d-flex justify-content-end">       
-                <input className="btn btn-primary" type="submit" name="" value="Add Comedy"/>
+                <input className="btn btn-primary" type="submit" name="" value="Update Comedy"/>
                 </div>
                 
              </form>

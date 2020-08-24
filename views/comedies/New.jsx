@@ -5,11 +5,12 @@ class New extends React.Component {
     render() {
       return (
           <Default>
+              <body className="new-comedy">
               <br/>
               <h1 className="new-h1 d-flex justify-content-center">New Comedy</h1>
               <div className="new-container d-flex justify-content-center align-items-center">
               
-           <div className="col-7">
+           <div className="col-7 bg-light text-dark pt-3 rounded">
               <form className="whole-form" action="/comedies/" method="POST">
               <div className="form-group"> 
                 <label for="title" >Title</label> 
@@ -31,8 +32,8 @@ class New extends React.Component {
                   </div>
 
                   <div classname="form-group">
-                  <input className="form-check-input" type="checkbox" name="watched"/>
-                  <label className="form-check-label" 
+                  <input className="form-check" type="checkbox" name="watched"/>
+                  <label className="" 
                   for="watched">Watched</label>
                   </div>
                    
@@ -43,6 +44,7 @@ class New extends React.Component {
                </form>
                </div>
                </div>
+               </body>
           </Default>
           );
     }

@@ -10,15 +10,32 @@ class Show extends React.Component {
         const { title, image, _id, synopsis, watched, trailer } = this.props.comedy;
         return (
             <Default>
-            <div>
-                <h1>{title}</h1>
-                <img src={image}></img>
-                <h2>Synopsis:</h2>
-                <p>{synopsis}</p>                
-                <iframe width="960" height="540" src={`${trailer}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>{watched ? `You've watched this movie` : `You still need to watch this movie`}</p>
-                <a href={`/comedies/${_id}/edit`}>Edit</a>
+            <body className="bg-light">
+        <div className="container my-container">
+            <div className="row align-items-end">
+                <div className="col my-col mt-5">
+                    {/* <h1 className="align-items-center">{title}</h1> */}
+                    <img className="w-75" src={image}></img>
+                    
+                </div>
+                <div className="col">
+                    <h3>Synopsis:</h3>
+                    <p>{synopsis}</p>
+                    <p className="my-0 border p-1 rounded">{watched ? `You've watched this movie` : `You still need to watch this movie`}</p>
+                    <a className="btn btn-primary my-3 d-flex justify-content-end text-align-center"href={`/comedies/${_id}/edit`}>Edit</a> 
+                    <iframe width="540" height="400" src={`${trailer}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
+            <div className="">
+                <div className="">
+                
+                </div>
+            </div> 
+            <div>              
+                
+            </div>   
+            </div>
+            </body>
             </Default>
         )
     }
