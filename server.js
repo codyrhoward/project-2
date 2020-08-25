@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 app.use(methodOverride('_method'));
-const mongoURI = process.env.mongo_URI
+const mongoURI = process.env.mongo_URI || 'mongodb://localhost/'+ `watchlist`;
 // mongoose connection
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', () => {
