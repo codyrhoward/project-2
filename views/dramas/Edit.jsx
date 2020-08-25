@@ -11,7 +11,7 @@ class Edit extends React.Component {
             <div className="new-container d-flex justify-content-center align-items-center">
             
          <div className="col-7">
-            <form className="whole-form" action="/dramas/" method="POST">
+            <form className="whole-form" action={`/dramas/${_id}?_method=PUT`} method="post">
 
             <div className="form-group"> 
               <label for="title" >Title</label> 

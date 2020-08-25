@@ -12,7 +12,7 @@ class Show extends React.Component {
             <Default>
             <body className="drama-show">
         <div className="container my-container">
-            <div className="row align-items-end">
+            <div className="row align-items-end mt-4">
                 <div className="col my-col mt-5">
                     {/* <h1 className="align-items-center">{title}</h1> */}
                     <img className="w-75" src={image}/>

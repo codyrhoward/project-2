@@ -56,7 +56,7 @@ router.get('/:id/edit', (req, res) => {
     // Find our document from the collection - using mongoose model
     Drama.findById(req.params.id, (err, foundDrama) => {
         // render the edit view and pass it the found drama
-        res.render('drama/Edit', {
+        res.render('dramas/Edit', {
             drama: foundDrama
         })
     });

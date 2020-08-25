@@ -8,7 +8,7 @@ class Index extends React.Component {
             <Default>
             <body className="drama-body">
             <div>                          
-                <h1 className="d-flex justify-content-center my-4 text-white">Your Drama Watchlist</h1>
+                <h1 className="d-flex justify-content-center ml-5 my-4 text-white">Drama</h1>
                 <hr/>
                 <ul className="comedy-index-ul">
                     {

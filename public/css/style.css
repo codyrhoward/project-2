@@ -1,20 +1,24 @@
 
 .home-body{
-    background-color: rgb(53,58,63);
+    background-color: rgb(48, 127, 246);
 }
 .jumbotron{
     background-image: url(https://cdn.pixabay.com/photo/2014/10/16/09/15/lens-490806_1280.jpg);
     background-size: cover;
     height: 33em;
 }
-.lead{
-    color: white;
-    text-align: left;
-} 
-.display-3{
+.home-container{
+    align-items: flex-end;
+    
+}
+.display-4{
+    text-align: right;
+}
+
+.display-2{
     color: rgb(48, 127, 246);
-    /* color: rgb(53, 58, 63); */
-    text-align: right;    
+    text-align: left; 
+      
 }
 .div{
     text-align: center;
@@ -42,6 +46,7 @@
 .comedy-index-img{
     width: 300px;
     height: 450px;
+    border-radius: 2px;
 }
 .under-container{
     display: flex;
