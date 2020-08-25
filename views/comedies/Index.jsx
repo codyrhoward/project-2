@@ -16,7 +16,7 @@ class Index extends React.Component {
                             return (
                                 <li className="comedy-index-li">
                                     {/* <h3>{comedy.title}</h3> */}
-                                    <a className="index-link" href={`/comedies/${comedy._id}`}><img className="comedy-index-img"src={comedy.image}/></a><br/>
+                                    <a className="index-link" href={`/comedies/${comedy._id}`}><img className="comedy-index-img" src={"https://m.media-amazon.com/images/M/MV5BZWI2NjliOTYtZjE1OS00YzAyLWJjYTQtYWNmZTQzMTQzNzVjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,673,1000_AL_.jpg"}/></a><br/>
                                     <div className="under-container">
                                     <p className="index-watched">{comedy.watched ? `You've watched this movie.` : `You need to watch this movie.`}</p>
                                     

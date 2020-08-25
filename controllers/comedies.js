@@ -32,7 +32,7 @@ router.put('/:id', (req, res) => {
     req.body.watched = req.body.watched === "on" ? true : false;
 
     // Update the comedy document using our model
-    Comedy.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedModel) => {
+    Comedy.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel) => {
         res.redirect('/comedies');
     });
 });
