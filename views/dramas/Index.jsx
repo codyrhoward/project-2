@@ -1,34 +1,39 @@
 const React = require('react');
+const Default = require('../components/Default');
 
 class Index extends React.Component {
     render() {
         const { dramas } = this.props;
         return (
-            <div>
-                <h1>Drama Index Page</h1>
-                <nav>
-                    <a href="/dramas/new">Create a New Drama</a>
-                </nav>
-                <ul>
+            <Default>
+            <body className="comedy-body">
+            <div>                          
+                <h1 className="d-flex justify-content-center my-4">Your Drama Watchlist</h1>
+                <hr/>
+                <ul className="comedy-index-ul">
                     {
                         dramas.map((drama, i) => {
                             return (
-                                <li>
-                                    <h3>{drama.title}</h3>
-                                    <a href={`/dramas/${drama._id}`}>{drama.title}</a> <br/> {drama.image} <br></br>
-                                    {drama.watched ? `It is watched` : `It is not watched`}
-                                    {/* /dramas/id_of_the_drama/override_post_method */}
+                                <li className="comedy-index-li">
+                                    {/* <h3>{drama.title}</h3> */}
+                                    <a className="index-link" href={`/dramas/${drama._id}`}><img className="comedy-index-img" src={drama.image}/></a><br/>
+                                    <div className="under-container">
+                                    <p className="index-watched">{drama.watched ? `You've watched this movie.` : `You need to watch this movie.`}</p>
+                                    
                                     <form action={`/dramas/${drama._id}?_method=DELETE`} method="POST">
-                                        <input type="submit" value="delete"/>
+                                        <input className="btn btn-primary" type="submit" value="delete"/>
                                     </form>
-                                    {/* Create a link to the edit route /dramas/id_of_drama/edit */}
-                                    <a href={`/dramas/${drama._id}/edit`}>Edit</a>
+                                    </div>
+                                    
+                                    
                                 </li>
                             )
                         })
                     }
                 </ul>
             </div>
+            </body>
+            </Default>
         )
     }
 }
