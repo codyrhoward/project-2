@@ -6,9 +6,9 @@ class Index extends React.Component {
         const { dramas } = this.props;
         return (
             <Default>
-            <body className="comedy-body">
+            <body className="drama-body">
             <div>                          
-                <h1 className="d-flex justify-content-center my-4">Your Drama Watchlist</h1>
+                <h1 className="d-flex justify-content-center my-4 text-white">Your Drama Watchlist</h1>
                 <hr/>
                 <ul className="comedy-index-ul">
                     {
@@ -18,7 +18,7 @@ class Index extends React.Component {
                                     {/* <h3>{drama.title}</h3> */}
                                     <a className="index-link" href={`/dramas/${drama._id}`}><img className="comedy-index-img" src={drama.image}/></a><br/>
                                     <div className="under-container">
-                                    <p className="index-watched">{drama.watched ? `You've watched this movie.` : `You need to watch this movie.`}</p>
+                                    <p className="index-watched text-white">{drama.watched ? `You've watched this movie.` : `You need to watch this movie.`}</p>
                                     
                                     <form action={`/dramas/${drama._id}?_method=DELETE`} method="POST">
                                         <input className="btn btn-primary" type="submit" value="delete"/>

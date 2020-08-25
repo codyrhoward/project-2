@@ -10,7 +10,7 @@ class Show extends React.Component {
         const { title, image, _id, synopsis, watched, trailer } = this.props.drama;
         return (
             <Default>
-            <body className="bg-light">
+            <body className="drama-show">
         <div className="container my-container">
             <div className="row align-items-end">
                 <div className="col my-col mt-5">

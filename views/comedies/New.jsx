@@ -10,7 +10,7 @@ class New extends React.Component {
               <h1 className="new-h1 d-flex justify-content-center">New Comedy</h1>
               <div className="new-container d-flex justify-content-center align-items-center">
               
-           <div className="col-7 bg-light text-dark pt-3 rounded">
+           <div className="col-7 bg-light text-dark pt-3 rounded mb-5">
               <form className="whole-form" action="/comedies/" method="POST">
               <div className="form-group"> 
                 <label for="title" >Title</label> 
