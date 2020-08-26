@@ -20,10 +20,12 @@ class Default extends React.Component {
                         </li>
 
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Genre</a>
+                            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Genres</a>
                             <div className="dropdown-menu">
                                 <a className="dropdown-item" href="/comedies">Comedy</a>
                                 <a className="dropdown-item" href="/dramas">Drama</a>
+                                <a className="dropdown-item" href="/horrors">Horror</a>
+                                <a className="dropdown-item" href="/scifis">Sci-Fi</a>
                             </div>
                         </li> 
 
@@ -32,6 +34,8 @@ class Default extends React.Component {
                             <div className="dropdown-menu">
                                 <a className="dropdown-item" href="/comedies/new">Add a Comedy</a>
                                 <a className="dropdown-item" href="/dramas/new">Add a Drama</a>
+                                <a className="dropdown-item" href="/horrors/new">Add a Horror</a>
+                                <a className="dropdown-item" href="/scifis/new">Add a Sci-Fi</a>
                             </div>
                         </li> 
                        </ul> 

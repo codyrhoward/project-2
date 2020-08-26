@@ -6,13 +6,13 @@ class New extends React.Component {
       return (
           <Default>
               
-              <body id="new-drama">
+              <body id="new-scifi">
               <br/>
-              <h1 className="new-h1 d-flex justify-content-center">New Drama</h1>
+              <h1 className="new-h1 d-flex justify-content-center">New Sci-Fi</h1>
               <div className="new-container d-flex justify-content-center align-items-center">
               
            <div className="col-7 bg-light text-dark pt-3 rounded mb-5">
-              <form className="whole-form" action="/dramas/" method="POST">
+              <form className="whole-form" action="/scifis/" method="POST">
               <div className="form-group"> 
                 <label for="title" >Title</label> 
                   <input className="form-control" type="text" name="title"/>
@@ -39,7 +39,7 @@ class New extends React.Component {
                   </div>
                    
                   <div className="form-group d-flex justify-content-end">       
-                  <input className="btn btn-primary" type="submit" name="" value="Add Drama"/>
+                  <input className="btn btn-primary" type="submit" name="" value="Add Sci-Fi"/>
                   </div>
                   
                </form>

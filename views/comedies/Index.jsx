@@ -8,7 +8,7 @@ class Index extends React.Component {
             <Default>
             <body className="comedy-body">
             <div>                          
-                <h1 className="d-flex justify-content-center ml-5 my-4 text-white">Comedy</h1>
+                <h1 className="d-flex justify-content-center ml-5 my-4 text-white">Comedies</h1>
                 <hr/>
                 <ul className="comedy-index-ul">
                     {
@@ -21,7 +21,7 @@ class Index extends React.Component {
                                     <p className="text-white">{comedy.watched ? `You've watched this movie.` : `You need to watch this movie.`}</p>
                                     
                                     <form action={`/comedies/${comedy._id}?_method=DELETE`} method="POST">
-                                        <input className="btn btn-primary" type="submit" value="delete"/>
+                                        <input className="btn btn-primary btn-sm" type="submit" value="delete"/>
                                     </form>
                                     </div>
                                     

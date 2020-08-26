@@ -26,6 +26,13 @@ mongoose.connection.once('open', () => {
 const dramasController = require('./controllers/dramas.js');
 app.use('/dramas', dramasController);
 
+const scifisController = require('./controllers/scifis.js');
+app.use('/scifis', scifisController);
+
+const horrorsController = require('./controllers/horrors.js');
+app.use('/horrors', horrorsController);
+
+
 const comediesController = require('./controllers/comedies.js')
 app.use('/comedies', comediesController)
 
